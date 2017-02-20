@@ -90,7 +90,7 @@
 <meta property="og:url" content="https://potcode.github.io/2017/02/06/移动端开发所踩过的坑-持续更新中…/index.html">
 <meta property="og:site_name" content="一罐代码">
 <meta property="og:description" content="摘要本文会持续总结自己在移动开发中所踩过的坑，以及填坑的方法">
-<meta property="og:updated_time" content="2017-02-06T10:04:11.000Z">
+<meta property="og:updated_time" content="2017-02-20T08:06:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端开发所踩过的坑(持续更新中…)">
 <meta name="twitter:description" content="摘要本文会持续总结自己在移动开发中所踩过的坑，以及填坑的方法">
@@ -372,6 +372,7 @@
 <blockquote>
 <p>分析： user-select 这个属性或许android 4.2.2 不支持 </p>
 </blockquote>
+<h3 id="2-input标签【部分android手机—虚拟键盘的backspace功能失效】"><a href="#2-input标签【部分android手机—虚拟键盘的backspace功能失效】" class="headerlink" title="2. input标签【部分android手机—虚拟键盘的backspace功能失效】"></a>2. input标签【部分android手机—虚拟键盘的backspace功能失效】</h3><p>曾经遇到下面的情况，在一些android手机上，弹起的虚拟键盘中，点击“backspace”键，无法触发keyup事件。<br>有两种解决方法：<br>（1）android原生可以写一个监听“backspace”键的事件，这样在app中，就能正常的出发keyup事件。【不足之处：部分android手机的自带浏览器也会有这种问题，最常见的就是华为手机】<br>（2）写一个函数来监听input事件。通过触发焦点的时候，写一个循环函数，输入的值和上次保存的值作比较，值不相等，调用<br>输入键盘的方法，并把当前的值赋给上次保存的值。<br>input标签失去焦点的时候，循环停止。</p>
 
       
     </div>
@@ -519,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-input-type-tel"><span class="nav-number">1.</span> <span class="nav-text">1. input [type=tel]</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-input-type-tel"><span class="nav-number">1.</span> <span class="nav-text">1. input [type=tel]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-input标签【部分android手机—虚拟键盘的backspace功能失效】"><span class="nav-number">2.</span> <span class="nav-text">2. input标签【部分android手机—虚拟键盘的backspace功能失效】</span></a></li></ol></div>
             
 
           </div>
